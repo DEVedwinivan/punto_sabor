@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>El punto del Sabor</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="brand__name">El punto del Sabor</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Navegación principal">
+        <a href="#menu">Nuestro menú</a>
+        <a href="#horarios">Nuestros Horarios</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+
+      <a class="phone" href="tel:+525512345678" aria-label="Llamar">
+        <i class="fa-solid fa-phone"></i>
+        <span>55 1234 5678</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-card">
+          <div class="arc-title" aria-hidden="true">
+            <svg viewBox="0 0 1000 260" width="100%" height="100%">
+              <defs>
+                <path id="arcPath" d="M 80 210 A 420 420 0 0 1 920 210" />
+              </defs>
+              <text class="arc-text">
+                <textPath href="#arcPath" startOffset="50%" text-anchor="middle">
+                  HAMBURGUESAS Y MÁS
+                </textPath>
+              </text>
+            </svg>
+          </div>
+
+          <!-- Imagen vacía -->
+          <div class="logo-placeholder" role="img" aria-label="Logo (placeholder)"></div>
+
+          <h1 class="hero-title">EL PUNTO DEL SABOR</h1>
+
+          <a class="btn-primary" href="#menu">
+            VER MENÚ <i class="fa-solid fa-caret-down"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-title">
+          <span class="line"></span>
+          <h2>NUESTRAS ESPECIALIDADES</h2>
+          <span class="line"></span>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-media" aria-label="Imagen (vacía)"></div>
+            <div class="card-body">
+              <p>Carne a la parrilla con queso, vegetales frescos y salsas especiales en pan tostado.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media" aria-label="Imagen (vacía)"></div>
+            <div class="card-body">
+              <p>Salchicha dorada con ingredientes frescos y salsas irresistibles en pan suave.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media" aria-label="Imagen (vacía)"></div>
+            <div class="card-body">
+              <p>Crujientes por fuera, suaves por dentro. El complemento perfecto.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="horarios">
+      <div class="container">
+        <div class="section-title section-title--light">
+          <span class="line"></span>
+          <h2>Horario de Atención</h2>
+          <span class="line"></span>
+        </div>
+
+        <div class="hours">
+          <p class="hours__lead">Atendemos viernes y sábados de 8:00 p.m. a 11:00 p.m.</p>
+          <p>También contamos con servicio a domicilio para que disfrutes sin salir de casa.</p>
+
+          <p class="hours__location" id="ubicacion">
+            <i class="fa-solid fa-location-dot"></i>
+            Nos ubicamos en Av. Siempre Viva #123, Col. Centro, Ciudad Ejemplo.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-row">
+        <span>Av. Siempre Viva #123, Col. Centro</span>
+        <span class="sep">—</span>
+        <span class="footer-phone">55 1234 5678</span>
+        <span class="sep">—</span>
+        <span>Viernes y sábados | 8:00 p.m. - 11:00 p.m.</span>
+      </div>
+
+      <div class="footer-bottom">
+        <small>© 2024 EL PUNTO DEL SABOR — Todos los derechos reservados.</small>
+
+        <div class="social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
