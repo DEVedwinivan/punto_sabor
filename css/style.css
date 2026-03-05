@@ -74,11 +74,12 @@ a{ color:inherit; text-decoration:none; }
 }
 .nav a:hover{ background:rgba(255,255,255,.07); }
 
-.phone{
+.phone-select{
+  position:relative;
   display:flex;
   align-items:center;
   gap:8px;
-  padding:8px 12px;
+  padding:8px 34px 8px 12px;
   border-radius:10px;
   background:linear-gradient(180deg, var(--accent), var(--accent-2));
   border:1px solid rgba(255,255,255,.14);
@@ -86,6 +87,50 @@ a{ color:inherit; text-decoration:none; }
   font-weight:700;
   font-size:.95rem;
   white-space:nowrap;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.phone-select:hover{
+  transform:translateY(-1px);
+  border-color:rgba(255,255,255,.28);
+  box-shadow:0 12px 26px rgba(0,0,0,.45);
+}
+.phone-select:focus-within{
+  border-color:rgba(236,215,183,.8);
+  box-shadow:0 0 0 2px rgba(236,215,183,.2), 0 12px 26px rgba(0,0,0,.48);
+}
+.phone-select i{
+  font-size:.85rem;
+  opacity:.95;
+}
+.phone-select::after{
+  content:"\f107";
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  font-size:.75rem;
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  pointer-events:none;
+  opacity:.92;
+}
+.phone-select select{
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  border:none;
+  background:transparent;
+  color:var(--text);
+  font-weight:700;
+  font-size:.95rem;
+  line-height:1.1;
+  min-width:120px;
+  padding-right:8px;
+  outline:none;
+  cursor:pointer;
+}
+.phone-select select option{
+  color:var(--bg-2);
 }
 
 .hero{ padding:30px 0 14px; }
@@ -278,7 +323,27 @@ a{ color:inherit; text-decoration:none; }
   font-size:1.1rem;
 }
 .sep{ opacity:.4; }
-.footer-phone{ color:var(--gold); font-weight:800; }
+.footer-phones{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.footer-phone-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);
+  color:var(--gold);
+  font-weight:800;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+.footer-phone-pill:hover{
+  background:rgba(255,255,255,.1);
+}
 .footer-bottom{
   display:flex;
   justify-content:space-between;
@@ -302,7 +367,8 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width: 1024px){
   .brand__name{ font-size:1.72rem; }
   .nav{ font-size:.88rem; }
-  .phone{ font-size:.84rem; }
+  .phone-select{ font-size:.84rem; }
+  .phone-select select{ font-size:.84rem; }
 
   .arc-title{ height:138px; }
   .arc-text{ font-size:52px; }
@@ -346,8 +412,12 @@ a{ color:inherit; text-decoration:none; }
   .nav.is-open{ display:flex; }
   .nav a{ padding:12px; }
 
-  .phone{ padding:8px 10px; }
-  .phone span{ display:none; }
+  .phone-select{ padding:8px 30px 8px 10px; }
+  .phone-select::after{ right:10px; }
+  .phone-select select{
+    min-width:102px;
+    max-width:108px;
+  }
 
   .hero{ padding-top:20px; }
   .hero-card{ padding:14px 12px 22px; border-radius:16px; }
@@ -371,5 +441,6 @@ a{ color:inherit; text-decoration:none; }
   .hours__location{ border-radius:16px; }
 
   .footer-row{ font-size:.94rem; }
+  .footer-phone-pill{ font-size:.92rem; }
   .footer-bottom{ justify-content:center; text-align:center; }
 }

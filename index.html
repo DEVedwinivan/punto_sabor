@@ -33,10 +33,14 @@
         <a href="#ubicacion">Ubicación</a>
       </nav>
 
-      <a class="phone" href="tel:+525512345678" aria-label="Llamar">
+      <label class="phone-select" for="phone-select" aria-label="Seleccionar teléfono para llamar">
         <i class="fa-solid fa-phone"></i>
-        <span>55 1234 5678</span>
-      </a>
+        <select id="phone-select" name="phone-select">
+          <option value="">Llámanos</option>
+          <option value="tel:+525528796029">55 2879 6029</option>
+          <option value="tel:+525579155826">55 7915 5826</option>
+        </select>
+      </label>
     </div>
   </header>
 
@@ -84,7 +88,21 @@
               <img src="img/hamburguesas.jpeg" alt="Hamburguesa especial" />
             </div>
             <div class="card-body">
-              <p>Carne a la parrilla con queso, vegetales frescos y salsas especiales en pan tostado.</p>
+              <h2 class="card-title">Hamburguesas</h2>
+              <ul>
+                <li>
+                  <h3>Hamburguesa Especial</h3>
+                  <p>Carne, Q/amarillo, lechuga, jitomate, cebolla: 70$</p>
+                </li>
+                <li>
+                  <h3>Hamburguesa Hawaiana</h3>
+                  <p>Carne, jamón, piña, Q/amarillo, Q/Oaxaca, lechuga, jitomate, cebolla: 80$</p>
+                </li>
+                <li>
+                  <h3>Hamburguesa Especial</h3>
+                  <p>Carne, salchicha, tocino, jamón, Q/amarillo, Q/Oaxaca, lechuga, jitomate, cebolla: $85</p>
+                </li>
+              </ul>
             </div>
           </article>
 
@@ -93,7 +111,17 @@
               <img src="img/hotdog.jpeg" alt="Hot dog especial" />
             </div>
             <div class="card-body">
-              <p>Salchicha dorada con ingredientes frescos y salsas irresistibles en pan suave.</p>
+              <h2 class="card-title">Hot Dogs</h2>
+              <ul>
+                <li>
+                  <h3>Hot Dog clásico</h3>
+                  <p>Salchicha, jitomate, cebolla: $25</p>
+                </li>
+                <li>
+                  <h3>Hot Dog especial</h3>
+                  <p>Salchicha, tocino, Q/Oaxaca, jitomate, cebolla: $35</p>
+                </li>
+              </ul>
             </div>
           </article>
 
@@ -102,7 +130,12 @@
               <img src="img/papas.jpeg" alt="Papas fritas" />
             </div>
             <div class="card-body">
-              <p>Crujientes por fuera, suaves por dentro. El complemento perfecto.</p>
+              <ul>
+                <li>
+                  <h3>Papas a la francesa</h3>
+                  <p>Crujientes por fuera, suaves por dentro. El complemento perfecto: $45</p>
+                </li>
+              </ul>
             </div>
           </article>
         </div>
@@ -135,10 +168,19 @@
       <div class="footer-row">
         <span>Av. Siempre Viva #123, Col. Centro</span>
         <span class="sep">—</span>
-        <span class="footer-phone">55 1234 5678</span>
-        <span class="sep">—</span>
         <span>Viernes y sábados | 8:00 p.m. - 11:00 p.m.</span>
       </div>
+
+        <div class="footer-phones" aria-label="Teléfonos de contacto">
+          <a class="footer-phone-pill" href="tel:+525528796029" aria-label="Llamar al 55 2879 6029">
+            <i class="fa-solid fa-phone"></i>
+            <span>55 2879 6029</span>
+          </a>
+          <a class="footer-phone-pill" href="tel:+525579155826" aria-label="Llamar al 55 7915 5826">
+            <i class="fa-solid fa-phone"></i>
+            <span>55 7915 5826</span>
+          </a>
+        </div>
 
       <div class="footer-bottom">
         <small>© 2026 EL PUNTO DEL SABOR — Todos los derechos reservados.</small>
